@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>栅格布局</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <style>
+        div[class*="col-"]{ 
+            background:#666; border:1px #00F solid; color:white; height:50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <p> 栅格分成 12 列 </p>
+    <div class="row">
+        <div class="col-lg-1">col-lg-1</div>
+        <div class="col-lg-11">col-lg-11</div>
+    </div>
+
+    <p> 当 row 中的内容 不足 12 时 , 剩下的空间不会填充 </p>
+    <div class="row">
+        <div class="col-lg-3">col-lg-3</div>
+        <div class="col-lg-4">col-lg-4</div>
+    </div>
+    
+    <p> 当 row 中的内容 > 12 , 超出部分会进入下一行  </p>
+    <div class="row">
+        <div class="col-lg-6">col-lg-6</div>
+        <div class="col-lg-6">col-lg-6</div>
+        <div class="col-lg-6">col-lg-6</div>
+    </div>
+
+    <p> 当 分辨率小于 1200 ， 垂直显示  </p>
+    <div class="row">
+        <div class="col-lg-4">col-lg-4</div>
+        <div class="col-lg-4">col-lg-4</div>
+        <div class="col-lg-4">col-lg-4</div>
+    </div>
+    
+    <p> 当 分辨率小于 992 ， 垂直显示  </p>
+    <div class="row">
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+    </div>
+    
+    <p> 当 分辨率小于 768 ， 垂直显示  </p>
+    <div class="row">
+        <div class="col-sm-4">col-sm-4</div>
+        <div class="col-sm-4">col-sm-4</div>
+        <div class="col-sm-4">col-sm-4</div>
+    </div>
+    
+    <p> 总是水平显示， 移动端 布局  </p>
+    <div class="row">
+        <div class="col-xs-4">col-xs-4</div>
+        <div class="col-xs-4">col-xs-4</div>
+        <div class="col-xs-4">col-xs-4</div>
+    </div>
+
+    <p>组合模式，水平 到 垂直 有一定的过渡，从高分辨率到低分辨率：
+    <ul><li>[1200,*) --> 使用 col-lg-4 属性；</li>
+    <li>[992,1200) --> 使用 col-md-3 属性；</li>
+    <li>[0  ,768) 和 [768,992) --> 垂直显示</li>
+    </ul>
+    </p>
+    <div class="row">
+        <div class="col-lg-4 col-md-3">col-lg-4 col-md-3</div>
+        <div class="col-lg-4 col-md-3">col-lg-4 col-md-3</div>
+        <div class="col-lg-4 col-md-3">col-lg-4 col-md-3</div>
+
+    </div>
+</div>
+
+</body>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/bootstrap.js"></script>
+</html>
