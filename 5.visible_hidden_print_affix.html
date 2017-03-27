@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
 
 <style>
-.tips1{ width:30px; height:300px; background:black;}
+.tips1{ width:30px; height:300px; background:black;right:0px;}
 
 </style>
 </head>
@@ -27,11 +27,14 @@
 <div class="container-fluid">
 <p>pull-left 是靠左，pull-right 靠右，但是右边会 有空隙，原因如下：</p>
 <p>直接放在容器中 会有padding ，解决方式 可以是 放在 row 中</p>
+
+<p>但是 pull-right 不是绝对布局，使用 affix 相对页面固定(结合 right:0px; 靠右显示)</p>
+
 <!-- 
     <div class="tips1 visible-lg-block pull-right"></div>
 -->
     <div class="row">
-        <div class="tips1 visible-lg-block pull-right"></div>
+        <div class="tips1 visible-lg-block affix"></div>
     </div>
     
 </div>
