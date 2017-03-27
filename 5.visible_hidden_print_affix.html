@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
   <head>
-    <title>可见和不可见</title>
+    <title>可见和不可见,pull-right</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.css">
 
 <style>
-div[class*="col-"]{ background:#666; border:1px #00F solid; color:white; min-height:50px;}
+.tips1{ width:30px; height:300px; background:black;}
+
 </style>
 </head>
 
-<body>
-
-<div class="container">
+<body style="height:2000px;">
+<p>body 设置 高度， 为了出现 垂直方向的滚动条 </p>
+<!-- <div class="container">
     <p>可见 和 不可见</p>
     <div class="row">
         <div class="col-lg-4 visible-md-block">col-lg-4 visible-md-block (在 md 分辨率 [992,1200) 时可见，其他分辨率不可见)</div>
         <div class="hidden-sm hidden-xs">aaaaaaaa，hidden-sm hidden-xs （在 小于 992（实际边界是等于 990 时不可见，因为 sm 的范围是 [768,992) ，那么边界范围(取整)就是 [768,991] ） 时 不可见）</div>
     </div>
    
+</div> -->
+
+<div class="container-fluid">
+<p>pull-left 是靠左，pull-right 靠右，但是右边会 有空隙，原因如下：</p>
+<p>直接放在容器中 会有padding ，解决方式 可以是 放在 row 中</p>
+<!-- 
+    <div class="tips1 visible-lg-block pull-right"></div>
+-->
+    <div class="row">
+        <div class="tips1 visible-lg-block pull-right"></div>
+    </div>
+    
 </div>
 
 </body>
