@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>可见和不可见</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+<style>
+div[class*="col-"]{ background:#666; border:1px #00F solid; color:white; min-height:50px;}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <p>可见 和 不可见</p>
+    <div class="row">
+        <div class="col-lg-4 visible-md-block">col-lg-4 visible-md-block (在 md 分辨率 [992,1200) 时可见，其他分辨率不可见)</div>
+        <div class="hidden-sm hidden-xs">aaaaaaaa，hidden-sm hidden-xs （在 小于 992（实际边界是等于 990 时不可见，因为 sm 的范围是 [768,992) ，那么边界范围(取整)就是 [768,991] ） 时 不可见）</div>
+    </div>
+   
+</div>
+
+</body>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/bootstrap.js"></script>
+</html>
