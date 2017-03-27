@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>列偏移，列排序，嵌套，及 消除浮动</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+<style>
+div[class*="col-"]{ background:#666; border:1px #00F solid; color:white; min-height:50px;}
+</style>
+</head>
+
+<body>
+<div class="container">
+	
+    <div class="row">
+    	<div class="col-lg-4">col-lg-4</div>
+        <div class="col-lg-4">col-lg-4</div>
+        <div class="col-lg-4">col-lg-4</div>
+    </div>
+    <p>offset 可以设置 列位移；
+    <ul><li>当 水平显示 时， 如果 offset + {col size} > 12 , 将突破 12 列的布局，右边凸出一块；</li>
+    <li>{col size} 默认 = 12 - offset ；</li>
+    <li>指定 {col size} 时， 如果 {col size} + offset > 12 ,右侧将 凸出一块；</li>
+    </ul>
+    </p>
+    <div class="row">
+        <div class="col-md-4">col-md-4(对照行)</div>
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+    </div>
+    <div class="row">
+    	<div class="col-lg-4 col-lg-offset-4 col-md-offset-6">col-lg-4（ col-lg-offset-4  col-md-offset-7 ）</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-7 col-md-offset-6">col-lg-4（ col-lg-offset-4 col-md-7 col-md-offset-6 ）</div>
+    </div>
+</div>
+</body>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/bootstrap.js"></script>
+</html>
