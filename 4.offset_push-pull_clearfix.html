@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>列偏移，列排序，嵌套，及 消除浮动</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+<style>
+div[class*="col-"]{ background:#666; border:1px #00F solid; color:white; min-height:50px;}
+</style>
+</head>
+
+<body>
+<div class="container">
+	
+    <div class="row">
+    	<div class="col-lg-4">col-lg-4</div>
+        <div class="col-lg-4">col-lg-4</div>
+        <div class="col-lg-4">col-lg-4</div>
+    </div>
+    <p>offset 可以设置 列位移；
+    <ul><li>当 水平显示 时， 如果 offset + {col size} > 12 , 将突破 12 列的布局，右边凸出一块；</li>
+    <li>{col size} 默认 = 12 - offset ；</li>
+    <li>指定 {col size} 时， 如果 {col size} + offset > 12 ,右侧将 凸出一块；</li>
+    </ul>
+    </p>
+    <div class="row">
+        <div class="col-md-4">col-md-4(对照行)</div>
+        <div class="col-md-4">col-md-4</div>
+        <div class="col-md-4">col-md-4</div>
+    </div>
+    <div class="row">
+    	<div class="col-lg-4 col-lg-offset-4 col-md-offset-6">col-lg-4（ col-lg-offset-4  col-md-offset-7 ）</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-lg-offset-4 col-md-7 col-md-offset-6">col-lg-4（ col-lg-offset-4 col-md-7 col-md-offset-6 ）</div>
+    </div>
+
+    <p>列排序：  push -> 在 col 前面 填充 （col 右移） ； pull -> col 左移</p>
+    <div class="row">
+        <div class="col-lg-2">col-lg-2</div>
+        <div class="col-lg-10">col-lg-10（原始排列）</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-lg-push-10">col-lg-2</div>
+        <div class="col-lg-10 col-lg-pull-2">col-lg-10 （倒序排列）</div>
+    </div>
+
+    <p>列位移 和 列排序的区别： 
+        <ul><li>列位移在 改行宽度不够时 会换行，并从行首偏移；</li>
+        <li>列排序，超出长度不会换行，但会超出 12 列</li></ul>
+    </p>
+    <div class="row">
+        <div class="col-lg-4">col-lg-4</div>
+        <div class="col-lg-4 col-lg-offset-5">col-lg-4 （ col-lg-offset-5 列位移）</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">col-lg-4</div>
+        <div class="col-lg-4 col-lg-push-5">col-lg-4（col-lg-4 col-lg-push-5 列排序，超出长度不会换行，但会超出 12 列）</div>
+    </div>
+
+    <p> B 行嵌套在 A 列中，则 B 行的 12列 宽度 即为 A 列的宽度</p>
+    <div class="row">
+        <div class="col-lg-6">
+        col-lg-6
+            <div class="row">
+                <div class="col-lg-4">col-lg-4</div>
+                <div class="col-lg-4">col-lg-4</div>
+                <div class="col-lg-4">col-lg-4</div>
+            </div>
+        </div>
+    </div>
+
+    <p> 清除浮动 ： （一行排不下后）默认以 一行中 最小高度 的元素 之后，如果想要排列到 新的一行中，使用 clearfix class 清除浮动。</p>
+    <div class="row">
+        <div class="col-lg-6">
+        col-lg-6
+            col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6col-lg-6
+        </div>
+        <div class="col-lg-3">col-lg-3</div>
+        <div class="col-lg-3">col-lg-3</div>
+        <div class="clearfix"></div>   <!-- 清除浮动 -->
+        <div class="col-lg-3">col-lg-3</div>
+    </div>
+
+</div>
+</body>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/bootstrap.js"></script>
+</html>
