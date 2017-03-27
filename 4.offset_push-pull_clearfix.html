@@ -37,6 +37,16 @@ div[class*="col-"]{ background:#666; border:1px #00F solid; color:white; min-hei
     <div class="row">
         <div class="col-lg-4 col-lg-offset-4 col-md-7 col-md-offset-6">col-lg-4（ col-lg-offset-4 col-md-7 col-md-offset-6 ）</div>
     </div>
+
+    <p>列排序：  push -> 在 col 前面 填充 （col 右移） ； pull -> col 左移</p>
+    <div class="row">
+        <div class="col-lg-2">col-lg-2</div>
+        <div class="col-lg-10">col-lg-10（原始排列）</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-lg-push-10">col-lg-2</div>
+        <div class="col-lg-10 col-lg-pull-2">col-lg-10 （倒序排列）</div>
+    </div>
 </div>
 </body>
 <script src="js/jquery-1.11.1.js"></script>
