@@ -1,6 +1,6 @@
 
 # 0x00. 什么是 Bootstrap
-![](./ReadMe.image/what_is_boostrap.png)
+![](https://github.com/yafey/learn_Bootstrap/blob/update_readme.md/README_image/what_is_boostrap.png)
 
 
 
@@ -147,12 +147,13 @@ http://v3.bootcss.com/getting-started/#template
     - 组合模式，水平 到 垂直 有一定的过渡
     
 - Tips 动画示例
-    ![](./ReadMe.image/row_split_12_cols.png)
-    ![](./ReadMe.image/horizontal_to_vertical.gif)
-    ![](./ReadMe.image/animation_while_horizontal_vertical.gif)
+    ![](https://github.com/yafey/learn_Bootstrap/blob/update_readme.md/README_image/row_split_12_cols.png)
+    ![](https://github.com/yafey/learn_Bootstrap/blob/update_readme.md/README_image/horizontal_to_vertical.gif)
+    ![](https://github.com/yafey/learn_Bootstrap/blob/update_readme.md/README_image/animation_while_horizontal_vertical.gif)
+
 
 #### 示例 ：模仿 bootcss.com {Bootstrap相关优质项目推荐} 版块
-    ![](./ReadMe.image/bootcss.com.simulation.gif)
+    ![](https://github.com/yafey/learn_Bootstrap/blob/update_readme.md/README_image/bootcss.com.simulation.gif)
 
 
 
