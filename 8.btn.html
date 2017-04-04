@@ -157,34 +157,40 @@
     <p>   按钮（按钮组） 箭头 ↓ 或 ↑ </p>
     
     <br><br>
-    <p>  在往按钮上添加图标时， a 和 button 标签都没问题，但是 input 标签不适用 ， 推荐 按钮 使用 button 标签。</p>
+    <p>  在往按钮（按钮组）上添加图标时， a 和 button 标签都没问题，但是 input 标签不适用 ， 推荐 按钮 使用 button 标签。</p>
     <br>
-    <p>   按钮 箭头 ↓ 或 ↑  ： a 标签：没问题</p>
+    <p>   按钮 箭头 ↓  ： a 标签：没问题</p>
     
     <a href="" class="btn btn-primary">按钮 <span class="caret"></span></a>
 
-    <p>   按钮 箭头 ↓ 或 ↑  ： button 标签：没问题 【推荐】</p>
+    <p>   按钮 箭头 ↓  ： button 标签：没问题 【推荐】</p>
     <button class="btn btn-primary">按钮 <span class="caret"></span></button>
 
-    <p>   按钮 箭头 ↓ 或 ↑  ： input 标签：不适合在需要往按钮里添加图标的场景。</p>
+    <p>   按钮 箭头 ↓  ： input 标签：不适合在需要往按钮里添加图标的场景。</p>
     <input type="button" value="按钮" class="btn btn-primary"><span class="caret"></span>
     
 
     <br><br>
-    <p>   按钮组 箭头 ↓ 或 ↑  ： a 标签：没问题</p>
+    <p>   按钮组 箭头 ↓   ： a 标签：没问题</p>
     <div class="btn-group">
         <a href="" class="btn btn-primary">按钮</a>
         <a href="" class="btn btn-primary"><span class="caret"></span></a>     
     </div>
 
-    <p>   按钮组 箭头 ↓ 或 ↑  ： button 标签：没问题 【推荐】</p>
+    <p>   按钮组 箭头 ↓  ： button 标签：没问题 </p>
     <div class="btn-group">
         <button class="btn btn-primary">按钮</button>
         <button class="btn btn-primary"><span class="caret"></span></button>    
     </div>
-    <p>   按钮组 箭头 ↓ 或 ↑  ： input 标签：不适合在需要往按钮里添加图标的场景。 (无演示示例)</p>
+    <p>   按钮组 箭头 ↓   ： input 标签：不适合在需要往按钮里添加图标的场景。 (无演示示例)</p>
 
+    <br><br><br>
+    <p>   按钮组 箭头  ↑  ： boot 无 向上箭头的 class ， 通过添加 dropup（默认 dropdown） class 实现 箭头向上。</p>
 
+    <div class="btn-group dropup">
+        <button class="btn btn-primary">按钮</button>
+        <button class="btn btn-primary"><span class="caret"></span></button>    
+    </div>
 
 </div>
 </body>
