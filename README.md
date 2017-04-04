@@ -153,7 +153,7 @@ http://v3.bootcss.com/getting-started/#template
 
 
 #### 示例 ：模仿 bootcss.com {Bootstrap相关优质项目推荐} 版块
-    ![](https://github.com/yafey/learn_Bootstrap/blob/update_readme.md/README_image/bootcss.com.simulation.gif)
+![](https://github.com/yafey/learn_Bootstrap/blob/update_readme.md/README_image/bootcss.com.simulation.gif)
 
 
 
