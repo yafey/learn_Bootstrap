@@ -235,7 +235,7 @@ http://v3.bootcss.com/getting-started/#template
     - btn-block
 - 按钮组
     - btn-group
-    - btn-group-justified
+    - btn-group-justified ： 端点对齐（自适应父级的大小）
     - btn-group-vertical
 - 实例 ： github 按钮组
 
