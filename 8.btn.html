@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <title>btn 按钮</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body style="height:2000px;">
+<div class="container">
+    <br>
+    <p> 按钮 必须要先加上 btn 的 基类 class ， 再加上其他的 class 达到不同的效果 。</p>
+    <hr/>
+    <p>本段内容在 {7.预定义样式} 中 出现过。</p>
+    <input type="button" value="默认样式">
+    <input type="button" value="首选项" class="btn btn-primary">
+    <input type="button" value="成功" class="btn btn-success">
+    <input type="button" value="一般信息" class="btn btn-info">
+    <input type="button" value="警告" class="btn btn-warning">
+    <input type="button" value="危险" class="btn btn-danger">
+    <br><br>
+    <input type="button" value="只有 基类 class" class="btn">
+    <input type="button" value="btn-default (鼠标放上去的效果跟 只有基类class 的 按钮一致)" class="btn btn-default">
+    <input type="button" value="btn-link" class="btn btn-link">
+    <br><br>
+    
+
+    <hr/>
+    <p> 按钮 大小，没有 btn-md (可以认为 默认就是这个 size) ， 其他的（btn-lg、btn-sm、btn-xs）很类似 栅格的分辨率的后缀</p>
+
+    <input type="button" value="默认（不加 size class）" class="btn btn-primary">
+    <input type="button" value="btn-lg" class="btn btn-primary btn-lg">
+    <input type="button" value="btn-sm" class="btn btn-primary btn-sm">
+    <input type="button" value="btn-xs" class="btn btn-primary btn-xs">
+
+    <hr/>
+    <p> 表单控件--输入框的 大小 </p>
+
+    <input type="text" class="form-control" placeholder="默认   height:34px;">
+    <input type="text" class="form-control input-lg" placeholder="input-lg   height:46px;">
+    <input type="text" class="form-control input-sm" placeholder="input-sm   height:30px;">
+
+
+    <hr/>
+    <p> btn 的 状态 </p>
+
+    <input type="button" value="缺省（鼠标移入的效果 跟 加了 active 的效果 一样 ；  按下的效果 跟 鼠标移入到 active 的效果 一样）" class="btn btn-primary">
+    <input type="button" value="active（在 Boot 里表示 已经选中 的状态）" class="btn btn-primary active">
+    <input type="button" value="disabled" class="btn btn-primary disabled">
+
+
+    <hr/>
+    <p> btn 的 种类 （a 、 input 、 button）,有区别，尤其是 a 标签，详见后续。 </p>
+
+    <a href="#" class="btn btn-primary"> &lt;a&gt; 按钮</a>
+    <button class="btn btn-primary">&lt;button&gt; 按钮</button>
+
+
+
+    <hr/>
+    <p> 块级 btn-block （按钮默认是行内的，包裹文字的 ；该 class 可以使 btn 变成块级，自适应 父级，就好像 div 或 p 标签 那样 ） </p>
+    <button class="btn btn-primary btn-block">按钮</button>
+
+
+
+    <hr/>
+    <p> 按钮组 : 多个按钮 按组 的形式 展示。</p>
+
+    <p>....对照组：独立按钮</p>
+    <input type="button" value="按钮 1" class="btn btn-primary">
+    <input type="button" value="按钮 2" class="btn btn-primary">
+    <input type="button" value="按钮 3" class="btn btn-primary">
+    
+    <br><br>
+    <p>   按钮组： 添加父级 及 btn-group class。(中间的按钮 和 两边的按钮 是 紧密连接的，四角为圆角)</p>
+    <div class="btn-group">
+        <input type="button" value="按钮组-按钮 1" class="btn btn-primary">
+        <input type="button" value="按钮组-按钮 2" class="btn btn-primary">
+        <input type="button" value="按钮组-按钮 3" class="btn btn-primary">
+    </div>
+
+
+    <br><br><br><br><br><br><br><br>
+    <p>   btn-group-justified 端点对齐（自适应父级大小） ： a 标签 ：无须改造。</p>
+
+    <div class="btn-group btn-group-justified">
+        <a href="#" class="btn btn-primary">按钮1</a>
+        <a href="#" class="btn btn-primary">按钮2</a>
+        <a href="#" class="btn btn-primary">按钮3</a>
+    </div>
+    <br><br>
+
+    <p>   btn-group-justified 端点对齐（自适应父级大小） ： input 标签 ，需要改造，添加父级，将每个 input 作为一组 按钮组，因为 input 的值 用的是 value 属性， 不像 a 标签那样是 文本子节点。</p>
+    <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+            <input type="button" value="按钮1" class="btn btn-primary">
+        </div>
+        <div class="btn-group">
+            <input type="button" value="按钮2" class="btn btn-primary">
+        </div>
+        <div class="btn-group">
+            <input type="button" value="按钮3" class="btn btn-primary">
+        </div>
+    </div>
+    <br><br>
+
+    <p>   btn-group-justified 端点对齐（自适应父级大小） ： button 标签， 参考 input 标签。</p>
+    <div class="btn-group btn-group-justified">
+        <div class="btn-group">
+            <button class="btn btn-primary">按钮1</button>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-primary">按钮2</button>
+        </div>
+        <div class="btn-group">
+            <button class="btn btn-primary">按钮3</button>
+        </div>
+    </div>
+
+
+
+    <br><br><br><br><br>
+    <p>   btn-group-vertical 按钮组改成纵向 ： 一般不用同时加上 btn-group class （会导致 右上角为直角。） </p>
+
+    <div class="btn-group-vertical">
+        <a href="#" class="btn btn-primary">按钮1</a>
+        <a href="#" class="btn btn-primary">按钮2</a>
+        <a href="#" class="btn btn-primary">按钮3</a>
+    </div>
+
+
+    <br><br><br><br><br>
+    <p>   btn-group 按钮组 大小 </p>
+
+    <div class="btn-group-vertical btn-group-lg">
+        <a href="#" class="btn btn-primary">按钮1 btn-group-lg</a>
+        <a href="#" class="btn btn-primary">按钮2</a>
+        <a href="#" class="btn btn-primary">按钮3</a>
+    </div>
+    <div class="btn-group-vertical btn-group-sm">
+        <a href="#" class="btn btn-primary">按钮1 btn-group-sm</a>
+        <a href="#" class="btn btn-primary">按钮2</a>
+        <a href="#" class="btn btn-primary">按钮3</a>
+    </div>
+    <div class="btn-group-vertical btn-group-xs">
+        <a href="#" class="btn btn-primary">按钮1 btn-group-xs</a>
+        <a href="#" class="btn btn-primary">按钮2</a>
+        <a href="#" class="btn btn-primary">按钮3</a>
+    </div>
+
+
+
+
+    <br><br><br><br><br>
+    <p>   按钮（按钮组） 箭头 ↓ 或 ↑ </p>
+    
+    <br><br>
+    <p>  在往按钮（按钮组）上添加图标时， a 和 button 标签都没问题，但是 input 标签不适用 ， 推荐 按钮 使用 button 标签。</p>
+    <br>
+    <p>   按钮 箭头 ↓  ： a 标签：没问题</p>
+    
+    <a href="" class="btn btn-primary">按钮 <span class="caret"></span></a>
+
+    <p>   按钮 箭头 ↓  ： button 标签：没问题 【推荐】</p>
+    <button class="btn btn-primary">按钮 <span class="caret"></span></button>
+
+    <p>   按钮 箭头 ↓  ： input 标签：不适合在需要往按钮里添加图标的场景。</p>
+    <input type="button" value="按钮" class="btn btn-primary"><span class="caret"></span>
+    
+
+    <br><br>
+    <p>   按钮组 箭头 ↓   ： a 标签：没问题</p>
+    <div class="btn-group">
+        <a href="" class="btn btn-primary">按钮</a>
+        <a href="" class="btn btn-primary"><span class="caret"></span></a>     
+    </div>
+
+    <p>   按钮组 箭头 ↓  ： button 标签：没问题 </p>
+    <div class="btn-group">
+        <button class="btn btn-primary">按钮</button>
+        <button class="btn btn-primary"><span class="caret"></span></button>    
+    </div>
+    <p>   按钮组 箭头 ↓   ： input 标签：不适合在需要往按钮里添加图标的场景。 (无演示示例)</p>
+
+    <br><br><br>
+    <p>   按钮组 箭头  ↑  ： boot 无 向上箭头的 class ， 通过添加 dropup（默认 dropdown） class 实现 箭头向上。</p>
+
+    <div class="btn-group dropup">
+        <button class="btn btn-primary">按钮</button>
+        <button class="btn btn-primary"><span class="caret"></span></button>    
+    </div>
+
+</div>
+</body>
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/bootstrap.js"></script>
+</html>
